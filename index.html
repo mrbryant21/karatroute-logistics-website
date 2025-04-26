@@ -7,6 +7,7 @@
   <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="stylesheet" href="styles/style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Karatroute Logistics || Home </title>
 </head>
 <body>
@@ -120,6 +121,229 @@
     </section>    
     
   </header>
+
+
+  <section class="shipping-rate-calculater py-5" id="shipping calculator">
+    <div class="container">
+      
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4">
+          <img class="img-fluid" src="images/logistics.png" alt="">
+        </div>
+        <div class="col-md-8">
+          <div class=" mb-5">
+            <h2 class="ship-heading">Get your moving quote</h2>
+            <p>Get an instant moving quote for your shipment</p>
+          </div>
+          <form id="calculatorForm" class="p-4 shadow rounded-4 bg-light">
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3">
+                <select name="" id="country" class="form-select mb-3" required>
+                  <option value="">Select Country </option>
+                </select>
+                <label for="from" class="form-label">From Location</label>
+                <input type="text" id="from" class="form-control" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <select name="" id="country" class="form-select mb-3" required>
+                  <option value="">Select Country</option>
+                </select>
+                <label for="to" class="form-label">To Location</label>
+                <input type="text" id="to" class="form-control" required>
+              </div>
+            </div>
+  
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3">
+                <label for="weight" class="form-label">Weight (kg)</label>
+                <input type="number" id="weight" class="form-control" required>
+              </div>
+  
+              <div class="col-md-6 mb-3">
+                <label for="packageType" class="form-label">Package Type</label>
+                <select id="packageType" class="form-select" required>
+                  <option value="">Select</option>
+                  <option value="standard">Standard</option>
+                  <option value="express">Express</option>
+                  <option value="fragile">Fragile</option>
+                </select>
+              </div>
+            </div>
+  
+            <div class="row align-items-center">
+              <div class="col-md-6 d-flex">
+                <i class="bi bi-inbox-fill me-2"></i><p>info@karatroute-logistics.com</p>
+              </div>
+              <div class="col-md-6">
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Get Quotes</button>
+                  </div>
+              </div>
+            </div>
+  
+            <div id="result" class="mt-4 text-center fs-4 fw-bold"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us-section">
+    <div class="container">
+      <div class="row p-5 justify-content-center align-items-center">
+        <div class="col-md-4 p-4 about-heading-container">
+          <h2 class="meet-heading">Meet Our Company <span class="kara">Karatroute</span> <span class="logis">Logistics</span> </h2>
+        </div>
+        <div class="col-md-8 text-center about-container">
+          <p class="about-text">Karatroute Logistics is a trusted partner in the world of transportation and supply chain solutions. We specialize in providing efficient, secure, and timely logistics services that empower businesses and individuals to move goods across cities, countries, and continents with confidence.
+
+            With years of experience in the industry, we have built a solid reputation for reliability, professionalism, and customer satisfaction. Our team of logistics experts works tirelessly to ensure every shipment is handled with precision — from pickup to delivery.
+            
+            We offer a range of services including freight forwarding, last-mile delivery, warehousing, and international shipping. Using technology-driven solutions, we keep our clients informed at every step of the journey with real-time tracking and responsive support.
+            
+            At Karatroute, we don’t just move packages — we move businesses forward. Whether you’re shipping a single parcel or managing a complex supply chain, you can count on us to deliver with excellence.</p>
+
+            <a href="">
+              <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;Read&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Read&nbsp;</span>
+            </button>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services p-5">
+    <div class="container">
+      <div class="row text-center justify-content-center">
+        <div class="col-md-8 py-3">
+          <h2>Our <span class="ser">Services</span></h2>
+          <p>We offer a wide range of professional services for you!</p>
+        </div>
+      </div>
+      <div class="row justify-content-center  align-items-center">
+        <div class="col-md-4 d-flex flex-column justify-content-center  align-items-center border-end">
+          <img class="img-fluid service-img" src="images/domestic-delivery.png" alt="">
+          <h5>Domestic Delivery</h5>
+          <p class="text-center ser-p">Fast and reliable delivery across the country, tailored for businesses and individuals who need packages delivered safely and on time.</p>
+          <button class="read-more-button">
+            <p>Explore</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="col-md-4 d-flex flex-column justify-content-center  align-items-center border-end">
+          <img class="img-fluid service-img" src="images/internationa-shipping.png" alt="">
+          <h5>International Shipping</h5>
+          <p class="text-center ser-p">We connect you to the world with seamless cross-border shipping solutions, ensuring your goods reach any global destination hassle-free.</p>
+          <button class="read-more-button">
+            <p>Explore</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="col-md-4 d-flex flex-column justify-content-center  align-items-center border-end">
+          <img class="img-fluid service-img" src="images/security-vault.png" alt="">
+          <h5>Security Vault</h5>
+          <p class="text-center ser-p">Protect what matters most with our high-security vault services, ideal for valuables, sensitive documents, and confidential cargo.</p>
+          <button class="read-more-button">
+            <p>Explore</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="col-md-4 d-flex flex-column justify-content-center  align-items-center border-end mt-5">
+          <img class="img-fluid service-img" src="images/warehousing-and-fulfillment.png" alt="">
+          <h5>Warehousing & Fulfillment</h5>
+          <p class="text-center ser-p">From storage to packaging and shipping, our smart warehousing solutions keep your inventory safe and your customers happy.
+          </p>
+          <button class="read-more-button">
+            <p>Explore</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="col-md-4 d-flex flex-column justify-content-center  align-items-center mt-5">
+          <img class="img-fluid service-img" src="images/freight-and-cargo-services.png" alt="">
+          <h5>Freight & Cargo Services</h5>
+          <p class="text-center ser-p">Whether by land, sea, or air, we handle bulk shipments with efficiency, offering custom freight solutions for businesses of all sizes.</p>
+          <button class="read-more-button">
+            <p>Explore</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-us">
+    <div class="container">
+      
+    </div>
+  </section>
 
   <script src="js/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

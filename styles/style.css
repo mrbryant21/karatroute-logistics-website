@@ -93,10 +93,12 @@ body{
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .carousel-caption {
   bottom: 60%;
+
 }
 .carousel-caption h1, p{
   color: var(--dark-color);
@@ -135,6 +137,178 @@ body{
 .carousel-indicators {
   bottom: 30px;
 }
+
+.ship-heading{
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.about-us-section{
+  background: url('../images/hero-image-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+
+}
+.about-container{
+  background: #001a58b9;
+  padding: 36px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.about-text{
+  text-align: justify;
+  color: white;
+}
+
+.about-heading-container{
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.meet-heading{
+  font-weight: 600;
+}
+
+.kara{
+  color: var(--primary-color);
+}
+
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgb(255, 255, 255);
+  --animation-color: var(--primary-color);
+  --fs-size: 1.5em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.service-img{
+  width: 120px;
+}
+
+.ser{
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.ser-p{
+ font-size: 14px;
+}
+
+.read-more-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.read-more-button {
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  /* font-weight: 600; */
+  font-size: 16px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.read-more-button p {
+  margin: 0;
+  position: relative;
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.read-more-button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.read-more-button p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Explore";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.read-more-button:hover::after {
+  width: 100%;
+}
+
+.read-more-button:hover p::before {
+  width: 100%;
+}
+
+.read-more-button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.read-more-button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+
+
+
+
+
 
 
 
