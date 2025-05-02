@@ -11,11 +11,21 @@ body{
   font-style: normal;
   /* margin-bottom: 2000px; */
 }
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
 
 :root {
   --primary-color: #f70b0b;
   --secondary-color: #005efe;
   --dark-color: #000000;
+  --footer-background: #013b6b;
 }
 
 .logo{
@@ -303,6 +313,162 @@ body{
   width: 15px;
   transition-delay: 0.2s;
 }
+
+.why-choose-us{
+  background: url('../images/why-choose-bg-1.jpg');
+  height: 90vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.why-choose-us-heading{
+  font-weight: 700;
+}
+
+.why-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.why-list li i{
+  margin-right: 16px;
+  color: var(--secondary-color);
+}
+
+
+.why-choose-p{
+  font-size: 13px;
+  color: rgb(160, 160, 160);
+}
+
+
+.testimonial-item {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  max-width: 900px;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.testimonial-item.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.testimonial-dots .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #999;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.testimonials {
+  position: relative;
+  min-height: 250px; /* Set enough space to hold all testimonial sizes */
+}
+
+.t-name{
+  color: #7a7a7a;
+  font-size: 16px;
+}
+
+.clients-heading{
+  font-weight: 700;
+}
+
+
+.footer {
+  background: #001a58;
+}
+
+.foot-head{
+  color: var(--secondary-color);
+}
+
+.foot-services-list{
+  color: white;
+  font-size: 14px;
+  padding-top:  10px;
+}
+.my-float {
+	/* font-size: 30px; */
+	color:#01A652
+}
+
+.float {
+  position: fixed;
+  padding: 5px 10px;
+  /* width: 60px; */
+  /* height: 60px; */
+  bottom: 40px;
+  left: 40px;
+  background-color: var(--secondary-color);
+  color: #FFF;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  html{
+    overflow-x: hidden;
+  }
+  body{
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  
+  .foot-head{
+    margin-top: 20px;
+  }
+  .navbar{
+    background-color: white;
+  }
+
+
+  .carousel-caption {
+    bottom: 55%;
+  }
+  .carousel-caption h1{
+    font-size: 1.4rem;
+  }
+
+  .carousel-caption p{
+    font-size: 0.8rem;
+  }
+
+  .carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* width: 100%; */
+  }
+
+}
+
 
 
 
