@@ -1,83 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="styles/style.css">
-  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>About Us || Karatroute Logistics </title>
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg   fixed-top " id="mainNavbar">
-      <div class="container border-bottom mb-4">
-        <a class="navbar-brand" href="#" data-aos="fade-right"><img class="logo" src="images/logo.png" alt="Karatroute Logistics logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto" data-aos="fade-down">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Domestic Delivery </a></li>
-                <li><a class="dropdown-item" href="#">International Shipping</a></li>
-                <li><a class="dropdown-item" href="#">Security Vault</a></li>
-                <li><a class="dropdown-item" href="#">Warehousing & Fulfillment</a></li>
-                <!-- <li><hr class="dropdown-divider"></li> -->
-                <li><a class="dropdown-item" href="#">Freight & Cargo Services</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-          </ul>
-          <div class="me-2 language-switch" data-aos="fade-left">
-            <select id="languageSelect" class="form-select">
-              <option value="en" selected>ENG</option>
-              <option value="de">DE</option>
-              <option value="fr">FRA</option>
-              <option value="es">ESP</option>
-            </select>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>About Us || Karatroute Logistics</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg sticky-top bg-white" id="mainNavbar">
+        <div class="container">
+          <a class="navbar-brand" href="#" data-aos="fade-right"
+            ><img
+              class="logo"
+              src="images/logo.png"
+              alt="Karatroute Logistics logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto"
+              data-aos="fade-down"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Domestic Delivery </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">International Shipping</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Security Vault</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Warehousing & Fulfillment</a
+                    >
+                  </li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Freight & Cargo Services</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <div class="me-2 language-switch" data-aos="fade-left">
+              <select id="languageSelect" class="form-select">
+                <option value="en" selected>ENG</option>
+                <option value="de">DE</option>
+                <option value="fr">FRA</option>
+                <option value="es">ESP</option>
+              </select>
+            </div>
+            <button class="custom-btn btn-2" data-aos="fade-left">
+              Get Started
+            </button>
           </div>
-          <button class="custom-btn btn-2" data-aos="fade-left">Login</button>
+        </div>
+      </nav>
+      <section class="about-hero pb-5">
+        <div class="main-about">
+          <div class="overlay">
+            <div class="container">
+              <div class="row justify-content-center align-items-center">
+                <div
+                  class="col-md-7 d-flex flex-column justify-content-center text-center"
+                >
+                  <h1 class="about-page-heading">About Karatroute</h1>
+                  <p class="text-white">
+                    Delivering excellence through tailored logistics solutions
+                    that drives efficiency, innovation and customer satisfaction
+                  </p>
+                  <h6 class="text-white mt-3">
+                    <i class="bi bi-circle-fill me-2 circle"></i>DELIVERY &
+                    TRANSPORTING AT YOUR SERVICE
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="who-we-are py-5">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-md-8">
+            <h6 class="who-heading">
+              <i class="bi bi-circle-fill me-2 circle"></i>Who we are
+            </h6>
+            <h2>
+              We Specialize in
+              <span class="about-highlight">
+                End-to-end <br />Logistics Services
+              </span>
+              That Ensure <br />Timely and Secure Delivery
+            </h2>
+            <p class="who-we-are-text mb-5">
+              Our dedicated team works around the clock to provide tailored
+              solutions for good businesses of all sizes, helping you meet your
+              goals with ease and reliability. <br />Start from customers
+              brokerage to last-mile delivery, we're committed to quality and
+              precision in every service we offer
+            </p>
+            <div class="below-text">
+              <p>
+                We Simplify logistics with advanced technology, so you can focus
+                on business growth
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img
+              class="img-fluid who-image"
+              src="images/logistics-transportation.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-    </nav>
-  </header>
+    </section>
 
+    <section
+      class="stats-section"
+      style="background: #fff; padding: 40px 0; text-align: center"
+    >
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-3">
+            <div class="stat" data-target="1000000" data-format="M"></div>
+            <p>Users</p>
+          </div>
 
+          <div class="col-md-3">
+            <div class="stat" data-target="845000" data-format="k">0</div>
+            <p>Happy Customers</p>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat" data-target="1000" data-format="">0</div>
+            <p>Offices Worldwide</p>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat" data-target="600" data-format="">0</div>
+            <p>Complete Projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-vision">
+      <div class="container">
+        <div class="row">
+
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mission-text">
+              <h6 class="who-heading"><i class="bi bi-circle-fill me-2 circle"></i>Our Mission</h6>
+              <p class="mission-vision-text">
+                Our mission is to provide reliable and efficient logistics
+                solutions that meet the unique needs of our customers. We are
+                committed to delivering excellence in every aspect of our
+                operations, from transportation and warehousing to customs
+                brokerage and supply chain management.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="vision-text">
+              <div class="vision-icon">
+                <img src="" alt="">
+              </div>
+              <h6 class="who-heading"><i class="bi bi-circle-fill me-2 circle"></i>Our Vision</h6>
+              <p class="mission-vision-text">
+                Our mission is to provide reliable and efficient logistics
+                solutions that meet the unique needs of our customers. We are
+                committed to delivering excellence in every aspect of our
+                operations, from transportation and warehousing to customs
+                brokerage and supply chain management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script src="js/script.js"></script>
+  <script src="js/app.js"></script>
   <!-- Start of LiveAgent integration script: Chat button: Rolling circle animated button 63 -->
   <script type="text/javascript">
-    (function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.defer=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
-    'https://karatroutelogistics.ladesk.com/scripts/track.js',
-    function(e){ LiveAgent.createButton('ob0k08bk', e); });
-    </script>
-    <!-- End of LiveAgent integration script -->
-    
-    
-  
-    <script src="js/script.js"></script>
-    <script src="js/app.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script>
-      AOS.init({
-        offset: 400,
-        duration: 1000
-      });
-    </script>
-</body>
+    (function (d, src, c) {
+      var t = d.scripts[d.scripts.length - 1],
+        s = d.createElement("script");
+      s.id = "la_x2s6df8d";
+      s.defer = true;
+      s.src = src;
+      s.onload = s.onreadystatechange = function () {
+        var rs = this.readyState;
+        if (rs && rs != "complete" && rs != "loaded") {
+          return;
+        }
+        c(this);
+      };
+      t.parentElement.insertBefore(s, t.nextSibling);
+    })(
+      document,
+      "https://karatroutelogistics.ladesk.com/scripts/track.js",
+      function (e) {
+        LiveAgent.createButton("ob0k08bk", e);
+      }
+    );
+  </script>
+  <!-- End of LiveAgent integration script -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    AOS.init({
+      offset: 400,
+      duration: 1000,
+    });
+  </script>
 </html>

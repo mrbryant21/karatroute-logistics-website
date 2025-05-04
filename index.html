@@ -11,8 +11,16 @@
   <title>Karatroute Logistics || Home </title>
 </head>
 <body>
+  <!-- <div id="loader-wrapper">
+      <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+        <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+      </svg>
+  </div> -->
   <header>
-    <nav class="navbar navbar-expand-lg   fixed-top " id="mainNavbar">
+    <nav class="navbar navbar-expand-lg  fixed-top " id="mainNavbar">
       <div class="container border-bottom mb-4">
         <a class="navbar-brand" href="#" data-aos="fade-right"><img class="logo" src="images/logo.png" alt="Karatroute Logistics logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -447,11 +455,11 @@
 
   <footer class="footer py-5">
     <div class="container">
-      <div class="row border-bottom py-5">
+      <div class="row">
         <div class="col-md-8">
           <div class="row">
             <div class="col-md-3 col-sm-12">
-              <img class="img-fluid" src="images/logo.png" alt="">
+              <img class="img-fluid footer-logo" src="images/footer-logo.png" alt="">
             </div>
             <div class="col-md-3 col-sm-12">
               <h5 class="foot-head">E-COMMERCE</h5>
@@ -489,8 +497,23 @@
         </div>
       </div>
 
-      <div class="row py-3">
-        <h6 class="text-white">Karatroute Logistics 	&#169; 2024  All rights reserved</h6>
+      <div class="row border-bottom">
+        <div class="col-md-8">
+          <p class="text-white">Join our community to unlock exclusive insights and innovative solutions for all your logistics needs</p>
+        </div>
+      </div>
+
+      <div class="row py-3 d-flex justify-content-between align-items-center">
+        <div class="col-md-6">
+          <h6 class="text-white">Karatroute Logistics 	&#169; 2024  All rights reserved</h6>
+        </div>
+        <div class="col-md-6 justify-content-end d-flex align-items-center gap-3">
+          <a href="" class="text-white">Privacy Policy</a>
+          <a href="" class="text-white">Terms and Conditions</a>
+          <a href="#"><button class="back-to-top-btn">
+            Back to Top <i class="bi bi-arrow-bar-up"></i>
+          </button></a>
+        </div>
       </div>
     </div>
   </footer>
@@ -516,6 +539,15 @@
       duration: 1000
     });
   </script>
+  <!-- <script>
+    window.addEventListener("load", function() {
+      const loader = document.getElementById("loader-wrapper");
+      loader.style.opacity = "0";
+      setTimeout(() => {
+        loader.style.display = "none";
+      },); // Add a small fade-out delay
+    });
+  </script> -->
 
 </body>
 </html>

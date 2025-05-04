@@ -110,3 +110,6 @@ const stats = document.querySelectorAll('.stat');
   const statsSection = document.querySelector('.stats-section');
   observer.observe(statsSection);
 
+
+
+

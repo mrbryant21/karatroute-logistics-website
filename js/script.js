@@ -40,3 +40,4 @@ window.addEventListener("scroll", function () {
   // Initialize first slide
   showSlide(currentSlide);
 
+
