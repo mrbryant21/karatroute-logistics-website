@@ -474,15 +474,20 @@ a{
 
 .about-hero{
   background: none;
-  padding: 10px;
+  /* padding: 10px; */
   overflow: hidden;
+}
+
+.mission-and-vision{
+  background: url(../images/logistics-background.jpg);
+  background-attachment: fixed;
 }
 
 .main-about{
   background: url('../images/about-headr.jpg');
   width: 100%;
   height: 50vh;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   background-size: cover;
   position: relative;
 }
@@ -491,11 +496,23 @@ a{
   background-color: rgba(2, 50, 122, 0.774);
   position: absolute;
   height: 50vh;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.overlay1{
+  background-color: rgba(2, 50, 122, 0.774);
+  position: absolute;
+  /* height: 100%; */
+  z-index: 1;
+  width: 100%;
+  content: "";
+}
+.mission-vision-content{
+  z-index: 1;
 }
 
 .about-page-heading{
@@ -528,24 +545,243 @@ a{
   border-radius: 20px;
 }
 
-.mission-vision{
-  /* background: var(--footer-background); */
+.mission-area{
+  background: #e4e4e4;
   padding: 16px;
-  height: 60vh;
-}
-
-.mission-text, .vision-text{
-  padding: 50px 50px 50px 10px;
-}
-
-.mission-text{
-  background-color: #e2e2e2;
   border-radius: 20px;
 }
-.vision-text{
-  background-color: lightblue;
+
+
+.vision-area{
+  background: lightblue;
+  padding: 16px;
   border-radius: 20px;
 }
+.mission-icon, .vision-icon{
+  margin-bottom: 60px;
+}
+.mission-icon img{
+  width: 70px;
+  height: 70px;
+}
+
+.vision-icon img{
+  width: 70px;
+  height: 70px;
+}
+
+.team-member-image img{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px;
+}
+
+.team-member-name{
+  font-size: 20px;
+}
+
+.team-member-position{
+  color: #7a7a7a;
+}
+
+.services-button {
+  --bg: #000;
+  --hover-bg: var(--secondary-color);
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  width: 200px;
+}
+
+.services-button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.services-button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.contact-icons{
+  color: var(--primary-color);
+}
+
+.contact-box{
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 10px;
+}
+
+.contact-heading{
+  /* font-weight: 600; */
+  /* font-size: 30px; */
+}
+
+.contact-form-box{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+}
+
+.wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #5264AE;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.wave-group .bar:before,.wave-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.contact-submit {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-submit:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.contact-submit:hover .icon {
+  transform: translate(4px);
+}
+
+.contact-submit:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.contact-submit::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.map-area{
+  background: url('../images/logistics-background.jpg');
+  /* background-position: top; */
+  /* background-size: cover; */
+  background-attachment: fixed;
+}
+
+
+
 
 
 
@@ -557,6 +793,7 @@ a{
   body{
     overflow: hidden;
     overflow-y: hidden;
+    /* margin-bottom: 500px; */
   }
   
   .foot-head{
@@ -606,7 +843,23 @@ a{
   .below-text{
     margin-bottom: 10px;
   }
+  .mission-area, .vision-area {
+    margin-bottom: 10px;
+  }
 
+  .team-member-image img{
+    width: 50%;
+    height: 200px;
+    object-position: top;
+  }
+
+  .team-member-name{
+    margin-top:  20px;
+  }
+
+  .contact-page-heading{
+    margin-bottom: 0 !important;
+  }
 }
 
 
