@@ -247,6 +247,9 @@ a{
 .service-img{
   width: 120px;
 }
+.services-img{
+width: 300px;
+}
 
 .ser{
   font-weight: 600;
@@ -488,6 +491,24 @@ a{
   width: 100%;
   height: 50vh;
   /* border-radius: 20px; */
+  background-size: cover;
+  position: relative;
+}
+.services-about{
+  background: url('../images/logistics-services-header.jpg');
+  width: 100%;
+  height: 50vh;
+  /* border-radius: 20px; */
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.contact-about{
+  background: url('../images/contact-logistics-header.jpg');
+  width: 100%;
+  height: 50vh;
+  /* border-radius: 20px; */
+  background-position: center;
   background-size: cover;
   position: relative;
 }
@@ -759,6 +780,7 @@ a{
   opacity: 0.6;
 }
 
+
 @keyframes shine {
   0% {
     left: -100px;
@@ -780,8 +802,33 @@ a{
   background-attachment: fixed;
 }
 
+.services-circle{
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.services-heading{
+  font-weight: 800;
+}
+
+.service-row-1{
+  background: rgb(241, 241, 241);
+  cursor: pointer;
+}
+
+.service-row-2{
+  background: var(--footer-background);
+  cursor: pointer;
+}
 
 
+.service-row-contact{
+  background: url('../images/contact-us-from-services.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  background-attachment: fixed;
+}
 
 
 

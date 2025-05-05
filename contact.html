@@ -64,24 +64,12 @@
                 Services
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">Domestic Delivery </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">International Shipping</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Security Vault</a></li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    >Warehousing & Fulfillment</a
-                  >
-                </li>
+                <li><a class="dropdown-item" href="services.html#domestic-delivery">Domestic Delivery </a></li>
+                <li><a class="dropdown-item" href="services.html#international-shipping">International Shipping</a></li>
+                <li><a class="dropdown-item" href="services.html#security-">Security Vault</a></li>
+                <li><a class="dropdown-item" href="services.html#warehouse">Warehousing & Fulfillment</a></li>
                 <!-- <li><hr class="dropdown-divider"></li> -->
-                <li>
-                  <a class="dropdown-item" href="#"
-                    >Freight & Cargo Services</a
-                  >
-                </li>
+                <li><a class="dropdown-item" href="services.html#freight-cargo">Freight & Cargo Services</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -103,7 +91,7 @@
       </div>
     </nav>
     <section class="about-hero pb-5">
-      <div class="main-about">
+      <div class="contact-about">
         <div class="overlay">
           <div class="container">
             <div class="row justify-content-center align-items-center" data-aos="fade-up">
@@ -175,11 +163,12 @@
             <i class="bi bi-circle-fill me-2 circle"></i>PLEASE FILL THE FORM BELOW 
           </h6>
           </h5>
-          <form action="" class="contact-form">
+          <form  class="contact-form" method="POST" id="form">
             <div class="row py-4 gap-2">
+              <input type="hidden" name="access_key" value="52f05c4f-89f1-4ba7-a3e3-ce44499e8883">
               <div class="col-md-5">
                 <div class="wave-group">
-                  <input required="" type="text" class="input">
+                  <input required="" type="text" name="Firstname" class="input">
                   <span class="bar"></span>
                   <label class="label">
                     <span class="label-char" style="--index: 0">F</span>
@@ -196,7 +185,7 @@
               </div>
               <div class="col-md-5">
                 <div class="wave-group">
-                  <input required="" type="text" class="input">
+                  <input required="" type="text" name="Lastname" class="input">
                   <span class="bar"></span>
                   <label class="label">
                     <span class="label-char" style="--index: 0">L</span>
@@ -214,7 +203,7 @@
             <div class="row py-4 gap-2">
               <div class="col-md-5">
                 <div class="wave-group">
-                  <input required="" type="number" class="input">
+                  <input required="" type="number" name="Phone_number" class="input">
                   <span class="bar"></span>
                   <label class="label">
                     <span class="label-char" style="--index: 0">P</span>
@@ -234,7 +223,7 @@
               </div>
               <div class="col-md-5">
                 <div class="wave-group">
-                  <input required="" type="text" class="input">
+                  <input required="" type="text" name="Email" class="input">
                   <span class="bar"></span>
                   <label class="label">
                     <span class="label-char" style="--index: 0">E</span>
@@ -247,20 +236,23 @@
                 </div>
               </div>
             </div>
-            <div class="me-2 language-switch py-3" data-aos="fade-left">
+            <div class="me-2  py-3" data-aos="fade-left">
               <label for="messaeg-subject" class="mb-2">Select Message Subject</label>
-              <select id="languageSelect" class="form-select">
+              <select id="MessageSelect" name="Subject" class="form-select">
                 <option value="en" selected>Select</option>
-                <option value="de">Delivery </option>
-                <option value="fr">Transporting</option>
-                <option value="es">Cargo Freight</option>
-                <option value="es">Warehousing</option>
+                <option value="delivery">Delivery </option>
+                <option value="international-shipping">Delivery </option>
+                <option value="transporting">Transporting</option>
+                <option value="cargo-freight">Cargo Freight</option>
+                <option value="warehousing">Warehousing</option>
               </select>
             </div>
             <div class="message">
               <label for="message" class="mb-2">Message</label>
-              <textarea name="message" id="message" cols="30" rows="5" class="form-control"></textarea>
+              <textarea name="message" id="message" name="Message" cols="30" rows="5" class="form-control"></textarea>
             </div>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <button class="contact-submit mt-3" type="submit">
               Contact Us
               <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
@@ -271,6 +263,8 @@
                 ></path>
               </svg>
             </button>
+
+            <div id="result"></div>
           </form>
         </div>
       </div>
@@ -364,7 +358,7 @@
     </div>
   </footer>
 </body>
-
+<script src="js/form.js"></script>
 <script src="js/script.js"></script>
 <script src="js/app.js"></script>
 <!-- Start of LiveAgent integration script: Chat button: Rolling circle animated button 63 -->
