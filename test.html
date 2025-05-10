@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="tracking-form">
+    <input type="text" id="trackingNumber" placeholder="Enter Tracking ID">
+    <button onclick="fetchTracking()">Track Order</button>
+  </div>
+  
+  <!-- Results Display -->
+  <div class="tracking-result" id="trackingResult">
+    <!-- Data will appear here -->
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+<script>
+  // Your Firebase config (replace with your actual config!)
+  const firebaseConfig = {
+    apiKey: "AIzaSyANfXBz6sEImTv1TB6pgWZDvb8qq9MEFHA",
+    authDomain: "karatroute-tracking.firebaseapp.com",
+    projectId: "karatroute-tracking",
+    storageBucket: "karatroute-tracking.firebasestorage.app",
+    messagingSenderId: "1022042996732",
+    appId: "1:1022042996732:web:c6540acf2bd51bb1f43c79"
+  };
+
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<script>
+  function fetchTracking() {
+  const trackingNumber = document.getElementById('trackingNumber').value;
+  const resultDiv = document.getElementById('trackingResult');
+
+  // Fetch data from Firestore
+  db.collection("tracking").doc(trackingNumber).get()
+    .then((doc) => {
+      if (doc.exists) {
+        const data = doc.data();
+        resultDiv.innerHTML = `
+          <h3>Order #${trackingNumber}</h3>
+          <p><strong>Status:</strong> ${data.status}</p>
+          <p><strong>Location:</strong> ${data.location}</p>
+          <p><strong>Estimated Delivery:</strong> ${data.estimatedDelivery}</p>
+        `;
+      } else {
+        resultDiv.innerHTML = "<p>Order not found. Check your tracking ID.</p>";
+      }
+    })
+    .catch((error) => {
+      resultDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+    });
+  }
+</script>
+</body>
+</html>

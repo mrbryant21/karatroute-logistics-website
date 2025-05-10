@@ -830,6 +830,9 @@ width: 300px;
   background-attachment: fixed;
 }
 
+.tracking{
+ height: 60vh;
+}
 
 
 @media screen and (max-width: 600px) {
