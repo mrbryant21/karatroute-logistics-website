@@ -324,9 +324,24 @@ document.addEventListener('DOMContentLoaded', () => {
     function getProgressPercent(status) {
         const progress = {
             'Processing': 25,
-            'In Transit': 65,
+            'Sailing/In Transit': 40,
             'Delivered': 100,
             'Delayed': 50,
+            'Draft': 10,
+            'Booked': 5,
+            'Notice of Readiness (NOR) Tendered': 10,
+            'Loaded': 20,
+            'Arrived at Port Discharge': 55,
+            'Discharged': 65,
+            'Picked Up by Shipping Agent': 70,
+            'Gate Out': 75,
+            'Customs Clearance': 80,
+            'Held at Customs': 82,
+            'Customs Duty': 85,
+            'Customs Duty/Additional Payment requested': 87,
+            'On Hold': 10,
+            'Reviewed by Shipping Agent': 90,
+            'Billed': 92,
             'Cancelled': 0
         };
         return progress[status] || 10;
@@ -334,10 +349,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function formatPaymentStatus(status) {
         const statusMap = {
-            'paid': 'Paid',
+            'paid': 'Payment Received',
             'unpaid': 'Awaiting Payment',
-            'partial': 'Partial Payment',
-            'refunded': 'Held at Customs'
+            'partial': 'Partial Payment received',
         };
         return statusMap[status] || (status || 'N/A');
     }
