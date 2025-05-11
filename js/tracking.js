@@ -335,9 +335,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatPaymentStatus(status) {
         const statusMap = {
             'paid': 'Paid',
-            'unpaid': 'Unpaid',
+            'unpaid': 'Awaiting Payment',
             'partial': 'Partial Payment',
-            'refunded': 'Refunded'
+            'refunded': 'Held at Customs'
         };
         return statusMap[status] || (status || 'N/A');
     }

@@ -12,8 +12,9 @@
   const app = firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
   export { db };
+  
+// Optional: Enable offline persistence (for reliability)
+db.enablePersistence().catch((err) => {
+  console.log("Firebase offline persistence error:", err);
+});
 
-  // Optional: Enable offline persistence (for reliability)
-  db.enablePersistence().catch((err) => {
-    console.log("Firebase offline persistence error:", err);
-  });
