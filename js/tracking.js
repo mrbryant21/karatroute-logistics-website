@@ -1,5 +1,35 @@
 import { db } from './firebase.js';
 
+// --- Download Results Button Handler ---
+document.addEventListener('DOMContentLoaded', () => {
+  const downloadBtn = document.getElementById('downloadResultsBtn');
+  const resultDiv = document.getElementById('result');
+
+  if (downloadBtn && resultDiv) {
+    downloadBtn.addEventListener('click', async () => {
+      if (!resultDiv.innerHTML.trim()) {
+        alert("No tracking information to download.");
+        return;
+      }
+
+      const { jsPDF } = window.jspdf;
+
+      // Use html2canvas to render the styled div as an image
+      const canvas = await html2canvas(resultDiv);
+      const imgData = canvas.toDataURL('image/png');
+
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      const imgProps = pdf.getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save('tracking_result.pdf');
+    });
+  }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const trackBtn = document.getElementById('trackBtn');
     const trackingInput = document.getElementById('trackingInput');
@@ -298,6 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
     }
+    
 
     // Helper Functions
     function getStatusColor(status) {

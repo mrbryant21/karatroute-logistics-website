@@ -642,10 +642,10 @@ width: 300px;
   border-radius: 10px;
 }
 
-.contact-heading{
-  /* font-weight: 600; */
-  /* font-size: 30px; */
-}
+/* .contact-heading{
+  font-weight: 600;
+  font-size: 30px;
+} */
 
 .contact-form-box{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -834,6 +834,17 @@ width: 300px;
  height: 60vh;
 }
 
+.karatroute-team{
+  border-radius: 20px;
+}
+
+.track-heading{
+  font-weight: 750;
+}
+
+.sh-text{
+  color: var(--primary-color);
+}
 
 @media screen and (max-width: 600px) {
 
