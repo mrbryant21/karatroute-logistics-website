@@ -278,3 +278,91 @@ const observer = new IntersectionObserver(
 
 const statsSection = document.querySelector(".stats-section");
 observer.observe(statsSection);
+
+ document.addEventListener('DOMContentLoaded', function() {
+    const cookieConsent = document.getElementById('cookieConsent');
+    const acceptBtn = document.getElementById('acceptCookies');
+    const declineBtn = document.getElementById('declineCookies');
+    const settingsBtn = document.getElementById('cookieSettings');
+    const settingsModal = document.getElementById('cookieSettingsModal');
+    const saveSettingsBtn = document.getElementById('saveCookieSettings');
+    const cancelSettingsBtn = document.getElementById('cancelCookieSettings');
+    const analyticsToggle = document.getElementById('analyticsCookies');
+    const marketingToggle = document.getElementById('marketingCookies');
+
+    // Check if consent was previously given
+    if (!localStorage.getItem('cookieConsent')) {
+      cookieConsent.style.display = 'block';
+    }
+
+    // Simple Accept/Decline handlers
+    acceptBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'all');
+      cookieConsent.style.display = 'none';
+      initializeCookies('all');
+    });
+
+    declineBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'essential');
+      cookieConsent.style.display = 'none';
+      initializeCookies('essential');
+    });
+
+    // Settings modal handlers
+    settingsBtn.addEventListener('click', function() {
+      settingsModal.style.display = 'block';
+    });
+
+    cancelSettingsBtn.addEventListener('click', function() {
+      settingsModal.style.display = 'none';
+    });
+
+    saveSettingsBtn.addEventListener('click', function() {
+      const consent = {
+        analytics: analyticsToggle.checked,
+        marketing: marketingToggle.checked
+      };
+      
+      localStorage.setItem('cookieConsent', JSON.stringify(consent));
+      settingsModal.style.display = 'none';
+      cookieConsent.style.display = 'none';
+      initializeCookies(consent);
+    });
+
+    // Initialize cookies based on preferences
+    function initializeCookies(consent) {
+      // Always initialize essential cookies
+      initEssentialCookies();
+      
+      if (consent === 'all' || (typeof consent === 'object' && consent.analytics)) {
+        initAnalyticsCookies();
+      }
+      
+      if (consent === 'all' || (typeof consent === 'object' && consent.marketing)) {
+        initMarketingCookies();
+      }
+    }
+
+    // Example cookie initialization functions
+    function initEssentialCookies() {
+      console.log('Essential cookies initialized');
+      // Your essential cookie logic here
+    }
+
+    function initAnalyticsCookies() {
+      console.log('Analytics cookies initialized');
+      // Initialize Google Analytics or other analytics tools
+    }
+
+    function initMarketingCookies() {
+      console.log('Marketing cookies initialized');
+      // Initialize Facebook Pixel or other marketing tools
+    }
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function(event) {
+      if (event.target === settingsModal) {
+        settingsModal.style.display = 'none';
+      }
+    });
+  });
